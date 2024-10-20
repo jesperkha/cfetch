@@ -16,13 +16,13 @@ In the [test](./test) directory there is a simple go server that responds with "
 
 int main()
 {
-	HttpResponse res = fetch("localhost:8080", HTTP_GET);
-	if (!res.ok)
-		return 1;
+    HttpResponse res = fetch("localhost:8080", HTTP_GET);
+    if (!res.ok)
+        return 1;
 
-	printf("Response: %s\n", res.body);
+    printf("Response: %s\n", res.body);
 
-	free_response(res);
-	return 0;
+    free_response(res);
+    return 0;
 }
 ```
